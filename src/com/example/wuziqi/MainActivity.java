@@ -1,15 +1,21 @@
 package com.example.wuziqi;
 
+
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
+	
+	Chessboard chessboard;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		chessboard = new Chessboard(this);
+		setContentView(chessboard);
 	}
 
 	@Override
